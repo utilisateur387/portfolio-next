@@ -1,0 +1,95 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@import "./components/about";
+@import "./components/card";
+@import "./components/filters";
+@import "./components/footer";
+@import "./components/headline";
+@import "./components/navbar";
+@import "./components/project_details";
+@import "./components/video";
+@import "./config/fonts";
+@import "./config/font_settings";
+
+body {
+  background: rgb(7,7,7);
+  margin: 0;
+  font-family: var(--font-alliance), -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  color: white;
+  padding: 1.5em;
+  padding-top: 0;
+}
+/* main {
+} */
+p {
+  line-height: 1.25em;
+}
+.uppercase {
+  text-transform: uppercase;
+}
+.italic {
+  font-style: italic;
+}
+.nobreak {
+  white-space: nowrap;
+}
+img {
+  width: 100%;
+}
+.project-list img {
+  border-radius: 4px;
+}
+a {
+  color: white;
+  text-decoration: none;
+}
+.project-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 24px;
+  text-align: left;
+  transition: 1s ease;
+  padding-top: 80px;
+}
+hr {
+  border-top: solid 1px white;
+  border-bottom: none;
+}
+.project-details {
+  padding-top: 68px;
+}
+.btn {
+  background: #0f0fcf;
+  color: white;
+  display: inline-block;
+  padding: 8px 12px;
+  border-radius: 10px;
+  position: fixed;
+  top: 20px;
+  left: 24px;
+  margin-top: 0;
+  cursor: pointer;
+}
+.arrow-back {
+  width: 11px;
+  margin-right: 6px;
+  display: inline-block;
+}
+@media screen and (max-width: 780px) {
+  .project-list {
+    grid-template-columns: 1fr;
+    transition: 1s ease;
+  }
+}

@@ -1,0 +1,64 @@
+.card {
+  margin-bottom: 16px;
+  font-size: 1.20em;
+}
+.card-top-infos {
+  display: flex;
+  justify-content: space-between;
+}
+.card p {
+  display: inline;
+  margin: 0;
+  margin-bottom: 12px;
+}
+.tag {
+  font-size: 13px;
+  text-transform: uppercase;
+  border: solid 1px white;
+  padding: 6px 8px 4px 8px;
+  margin-left: 6px;
+  border-radius: 16px;
+}
+.card img {
+  transition: transform ease-out 0.35s;
+}
+.card img:hover {
+  transform: scale(1.03);
+  transition: transform ease-out 0.35s;
+}
+.img-container {
+  border-radius: 10px;
+  overflow: hidden;
+  padding: 0px;
+}
+.img-container > img {
+  margin-bottom: -4px; /* TEMPORARY, NEEDS TO BE FIXED */
+  max-height: 100%;
+}
+
+@media screen and (max-width: 440px) {
+  .card-top-infos {
+    display: block;
+    margin-bottom: 16px;
+  }
+  .card p {
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 8px;
+  }
+  .tags-container {
+    margin-bottom: 12px;
+  }
+  .tag:first-child {
+    margin-left: 0;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  .project-list {
+    grid-template-columns: 1fr;
+    transition: 1s ease;
+  }
+}
+
+

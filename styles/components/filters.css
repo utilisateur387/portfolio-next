@@ -1,0 +1,84 @@
+.tag-list {
+  margin: 16px;
+}
+.filter-title {
+  margin: 16px;
+  line-height: 35px;
+}
+.tags-clickable {
+  background: rgba(0,0,0,0);
+  color: white;
+  border: solid 1px white;
+  margin: 4px 4px 4px 0;
+  padding: 7px 14px;
+  border-radius: 18px;
+  font-size: 1em;
+  text-transform: capitalize;
+  display: inline-block;
+  cursor: pointer;
+}
+.filter-button {
+  position: fixed;
+  top: 20px;
+  left: 24px;
+  background: #0f0fcf;
+  margin-right: 8px;
+  z-index: 400;
+  color: white;
+  border-radius: 10px;
+  max-width: calc(100vw - 48px);
+  display: inline-block;
+}
+.nav-buttons {
+  z-index: 300;
+}
+.about {
+  padding-top: 32px;
+  font-size: 2em;
+}
+.info-button {
+  z-index: 300;
+  position: fixed;
+  top: 20px;
+  left: 140px;
+  display: inline-block;
+  background: #0f0fcf;
+  color: white;
+  padding: 8px 12px;
+  border-radius: 10px;
+  max-width: calc(100vw - 72px);
+  white-space: nowrap;
+}
+.tag-active {
+  background: white;
+  color: #0f0fcf;
+}
+.cross {
+  display: none;
+  text-transform: none;
+  margin-left: 10px;
+  font-weight: bold;
+}
+.cross-active {
+  display: inline;
+}
+.img-cross {
+  width: 9px;
+  margin-bottom: 1px;
+  display: inline-block;
+}
+
+.img-cross-block {
+  position: absolute;
+  top: 9px;
+  right: 9px;
+  width: 24px;
+  margin-bottom: 1px;
+  padding: 6px;
+}
+.hide {
+  display: none;
+}
+.filter-title, .info-button, .img-cross-block {
+  cursor: pointer;
+}
