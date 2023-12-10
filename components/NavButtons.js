@@ -2,10 +2,7 @@ import FilterButton from './FilterButton';
 import { motion } from 'framer-motion';
 import InfoButton from './InfoButton';
 
-const NavButtons = ({ active, tags, toggleFilters, toggleAbout, tagCount }) => {
-  console.log('[tags]');
-  console.log(tags);
-
+const NavButtons = ({ tags, toggleFilters, toggleAbout, tagCount }) => {
   return (
     <motion.div
       id="filters"

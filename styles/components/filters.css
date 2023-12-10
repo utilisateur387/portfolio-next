@@ -41,6 +41,7 @@
   position: fixed;
   top: 20px;
   left: 140px;
+  height: 35px;
   display: inline-block;
   background: #0f0fcf;
   color: white;
@@ -48,6 +49,8 @@
   border-radius: 10px;
   max-width: calc(100vw - 72px);
   white-space: nowrap;
+  display: flex;
+  align-items: center;
 }
 .tag-active {
   background: white;

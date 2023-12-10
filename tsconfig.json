@@ -24,6 +24,6 @@
       "@styles/*": ["./styles/*"],
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "**/*.js", "app/(site)/page.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "**/*.js", "**/*.tsx", "app/(site)/page.jsx"],
   "exclude": ["node_modules"]
 }

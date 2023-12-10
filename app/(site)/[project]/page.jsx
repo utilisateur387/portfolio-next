@@ -9,7 +9,6 @@ import { useRouter } from 'next/navigation'
 
 const Project = ({ params }) => {
   const slug = params.project
-  console.log(data);
   const router = useRouter()
 
   useEffect(() => {
@@ -18,8 +17,7 @@ const Project = ({ params }) => {
 
   const id = slug
   const project = data.find(project => project.id == id);
-  console.log('[project]');
-  console.log(project);
+
   const coverUrl = `images/${project.title
     .toLowerCase()
     .replaceAll(' ', '_')
