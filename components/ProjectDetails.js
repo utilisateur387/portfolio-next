@@ -1,40 +1,28 @@
-import { useEffect } from 'react';
-import { useParams } from 'react-router-dom';
-import { useHistory } from 'react-router-dom';
-import data from "../data/projects_data.json";
-import { motion } from 'framer-motion';
+'use client'
 
-const ProjectDetails = () => {
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import { useRouter } from 'next/navigation'
+
+const ProjectDetails = ({ project }) => {
   useEffect(() => {
     window.scrollTo(0, 0) // Scroll to top to prevent landing at the bottom
   }, []);
 
-  const {id} = useParams();
-  const project = data.find(project => project.id == id);
-  const coverUrl = `images/${project.title
-    .toLowerCase()
-    .replaceAll(' ', '_')
-    .replaceAll('.', '')
-  }/cover_image.jpg`;
+  const id = project._id;
+  const coverUrl = project.coverImage;
+  const coverAlt = project.title;
 
-  const imgsFolder = `images/${project.title
-    .toLowerCase()
-    .replaceAll(' ', '_')
-    .replaceAll('.', '')
-  }`;
+  console.log(project.categories);
 
-  const history = useHistory();
+  const imgsFolder = null
+
+  const router = useRouter()
   const handleBack = () => {
-    history.go(-1);
-    // history.push('/#filters');
+    router.push('/#projects')
   }
 
-  const images = [...Array(project.img_count)].map((e, i) =>
-    <div className="project-images-container">
-      <img src={`${imgsFolder}/asset0${i + 1}.jpg`} alt=""/>
-    </div>
-  )
-
+  const images = null
 
   return (
       <>
@@ -57,7 +45,7 @@ const ProjectDetails = () => {
                 {project.title}
               </span>
               <span className="italic">
-                , {project.type}, {project.date}
+                , {project.type}, {project.year}
               </span>
             </p>
 
@@ -68,7 +56,7 @@ const ProjectDetails = () => {
               <div className="categories">
                 <p className='content-title'>Categories</p>
                 <div className="container-categories-tags">
-                  {project.tags.map(tag => <span className="tag tag-details-page" key={tag}>{`${tag} `}</span>)}
+                  {project.categories.map(tag => <span className="tag tag-details-page" key={tag}>{`${tag} `}</span>)}
                 </div>
 
                { (project.livesite || project.github) &&
@@ -136,7 +124,7 @@ const ProjectDetails = () => {
               <div className="categories">
                 <p className='content-title'>Categories</p>
                 <div className="container-categories-tags">
-                  {project.tags.map(tag => <span className="tag tag-details-page" key={tag}>{`${tag} `}</span>)}
+                  {project.categories.map(tag => <span className="tag tag-details-page" key={tag}>{`${tag} `}</span>)}
                 </div>
 
                { (project.livesite || project.github) &&

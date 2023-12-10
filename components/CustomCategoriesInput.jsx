@@ -1,9 +1,9 @@
 import React from "react";
 
-const CustomCategoriesInput = (props, ref) => {
+const CustomCategoriesInput = React.forwardRef((props, ref) => {
   const { 
     type, 
-    value, 
+    value = [], 
     onChange, 
     readOnly, 
     placeholder  
@@ -43,6 +43,6 @@ const CustomCategoriesInput = (props, ref) => {
       ))}
     </div>
   );
-};
+})
 
 export default CustomCategoriesInput

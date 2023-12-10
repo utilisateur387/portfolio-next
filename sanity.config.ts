@@ -1,6 +1,7 @@
 import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 import schemas from "./sanity/schemas";
+import { visionTool } from "@sanity/vision";
 
 const config = defineConfig({
   projectId: '9qina2zm',
@@ -8,7 +9,7 @@ const config = defineConfig({
   title: 'Portfolio Miebi',
   apiVersion: '2023-12-09',
   basePath: '/admin',
-  plugins: [deskTool()],
+  plugins: [deskTool(), visionTool()],
   schema: { types: schemas }
 })
 

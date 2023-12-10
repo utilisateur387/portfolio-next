@@ -2,11 +2,8 @@ import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 
 const Card = ({ project }) => {
-  const coverUrl = `images/${project.title
-    .toLowerCase()
-    .replaceAll(' ', '_')
-    .replaceAll('.', '')
-  }/cover_image.jpg`;
+  const coverUrl = project.coverImage;
+  const coverAlt = project.title;
 
   const [ref, inView] = useInView({
     threshold: 0,
@@ -23,15 +20,15 @@ const Card = ({ project }) => {
           { project.coming_soon && <span style={{ textTransform: "lowercase"}}> – <i>coming soon!</i></span> }
         </p>
         <div className="tags-container">
-          {project.tags.map(tag => <span className="tag" key={tag}>{tag}</span>)}
+          {project.categories.map(tag => <span className="tag" key={tag}>{tag}</span>)}
         </div>
       </div>
 
-      { !project.coming_soon && <Link href={`/${project.id}`}>
+      { !project.coming_soon && <Link href={`/${project.slug}`}>
         <div
           className="img-container"
           style={{ opacity: inView ? 1 : 0, transition: 'opacity 1s', transitionDelay: '50ms'}}>
-          <img src={coverUrl} alt="" />
+          <img src={coverUrl} alt={coverAlt} />
         </div>
       </Link> }
 
@@ -39,7 +36,7 @@ const Card = ({ project }) => {
         <div
           className="img-container"
           style={{ opacity: inView ? 1 : 0, transition: 'opacity 1s', transitionDelay: '50ms'}}>
-          <img src={coverUrl} alt="" />
+          <img src={coverUrl} alt={coverAlt} />
         </div>
        }
     </div>
