@@ -117,6 +117,11 @@ const project = {
       name: 'music',
       title: 'Music',
       type: 'string',
+    }, {
+      name: 'orderRank',
+      title: 'Order rank',
+      type: 'string',
+      hidden: ({document}) => !document?.title
     }
   ]
 }
