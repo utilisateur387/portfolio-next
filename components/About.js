@@ -123,14 +123,16 @@ const About = ({ toggleAbout, showAbout }) => {
             </p>
             <p className="technologies">
               <div>
+                NextJS<br/>
                 ReactJS<br/>
+                Sanity<br/>
                 PHP<br/>
                 Ruby on Rails<br/>
                 ES6 Javascript<br/>
                 HTML, CSS<br/>
                 Git, GitHub<br/>
-                SQL, Postgres<br/>
-                Heroku, Clever Cloud<br/>
+                SQL, GraphQL<br/>
+                {/* Heroku, Clever Cloud<br/> */}
               </div>
 
               <div>

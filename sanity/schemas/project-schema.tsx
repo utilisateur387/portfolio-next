@@ -64,14 +64,24 @@ const project = {
         }
       ]
     }, {
-      name: 'url',
-      title: 'URL',
-      type: 'url',
-    }, {
-      name: 'content',
-      title: 'Content',
+      name: 'description',
+      title: 'Description',
       type: 'array',
       of: [{ type: 'block' }]
+    }, {
+      name: 'liveUrl',
+      title: 'Live URL',
+      type: 'url',
+    }, {
+      name: 'tools',
+      title: 'Tools',
+      type: 'array',
+      of: [{ type: 'string' }]
+    }, {
+      name: 'team',
+      title: 'Team',
+      type: 'array',
+      of: [{ type: 'string' }]
     }
   ]
 }

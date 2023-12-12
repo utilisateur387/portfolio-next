@@ -3,8 +3,14 @@
 import { useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { useRouter } from 'next/navigation'
+import { PortableText } from '@portabletext/react';
+import { Project } from '@/types/types';
 
-const ProjectDetails = ({ project }) => {
+type ProjectProps = {
+  project: Project
+}
+
+const ProjectDetails = ({ project } : ProjectProps) => {
   useEffect(() => {
     window.scrollTo(0, 0) // Scroll to top to prevent landing at the bottom
   }, []);
@@ -12,9 +18,6 @@ const ProjectDetails = ({ project }) => {
   const id = project._id;
   const coverUrl = project.coverImage;
   const coverAlt = project.title;
-
-  console.log(project.categories);
-
   const imgsFolder = null
 
   const router = useRouter()
@@ -80,7 +83,7 @@ const ProjectDetails = ({ project }) => {
 
               <div className="description">
                 <p className='content-title'>Project information</p>
-                {project.full_description}
+                <PortableText value={project.description} />
               </div>
 
               <div></div>
@@ -117,7 +120,7 @@ const ProjectDetails = ({ project }) => {
             {/* MOBILE LAYOUT */}
             <div className="description mobile">
               <p className='content-title'>Project information</p>
-              {project.full_description}
+              <PortableText value={project.description} />
             </div>
 
             <div className="project-infos mobile">
