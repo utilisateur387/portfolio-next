@@ -10,11 +10,6 @@ const Projects = ({ projects, activeFilters, tagCount }) => {
   // console.log(inView);
   // if (inView) showNavButtons();
 
-  projects.map(project => {
-    console.log("[project title]")
-    console.log(project.title)
-  })
-
   return (
     <>
       <div ref={ref}></div>
@@ -41,7 +36,7 @@ const Projects = ({ projects, activeFilters, tagCount }) => {
 
         {
           projects.map(project => {
-            return <Card project={project} key={project.id} />
+            return <Card project={project} key={project._id} />
           })
         }
 

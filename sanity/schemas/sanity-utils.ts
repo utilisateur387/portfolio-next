@@ -27,6 +27,15 @@ export async function getProject(slug: string): Promise<Project> {
       categories[],
       "slug": slug.current,
       "coverImage": coverImage.asset->url,
+      "gallery": gallery[]{
+        "url": asset->url,
+        alt
+      },
+      team[],
+      tools[],
+      music,
+      githubUrl,
+      liveUrl,
     }`,
     { slug: slug }
   )

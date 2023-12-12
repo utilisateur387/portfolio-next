@@ -57,7 +57,7 @@ video {
     height: calc((100vw - 48px) / 2);
   }
   .project-infos {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
   }
   .desktop {
     display: none;

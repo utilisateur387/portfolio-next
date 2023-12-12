@@ -1,7 +1,7 @@
 const Footer = () => {
   return (
     <footer>
-      © Miebi • 2023
+      <span>© Miebi • 2023</span> – <span>Built with NextJS and Sanity</span>
     </footer>
   )
 }

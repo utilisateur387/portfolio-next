@@ -64,14 +64,29 @@ const project = {
         }
       ]
     }, {
+      name: 'gallery',
+      title: 'Gallery',
+      type: 'array',
+      of: [
+        {
+          name: 'image',
+          title: 'Image',
+          type: 'image',
+          options: {
+            hotspot: true
+          },
+          fields: [{
+            name: 'alt',
+            title: 'Alt',
+            type: 'string',
+          }]
+        }
+      ]
+    }, {
       name: 'description',
       title: 'Description',
       type: 'array',
       of: [{ type: 'block' }]
-    }, {
-      name: 'liveUrl',
-      title: 'Live URL',
-      type: 'url',
     }, {
       name: 'tools',
       title: 'Tools',
@@ -82,6 +97,26 @@ const project = {
       title: 'Team',
       type: 'array',
       of: [{ type: 'string' }]
+    }, {
+      name: 'liveUrl',
+      title: 'Live URL',
+      type: 'url',
+    }, {
+      name: 'githubUrl',
+      title: 'Github URL',
+      type: 'url',
+    }, {
+      name: 'vimeo',
+      title: 'Vimeo',
+      type: 'string',
+    }, {
+      name: 'youtube',
+      title: 'Youtube',
+      type: 'string',
+    }, {
+      name: 'music',
+      title: 'Music',
+      type: 'string',
     }
   ]
 }

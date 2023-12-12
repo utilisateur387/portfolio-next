@@ -4,6 +4,7 @@ import About from '@/components/About'
 import Headline from '@/components/Headline'
 import NavButtons from '@/components/NavButtons'
 import Projects from '@/components/Projects'
+import { CATEGORIES } from '@/contants'
 import { Project } from '@/types/types'
 import Image from 'next/image'
 import { useState } from 'react'
@@ -17,7 +18,9 @@ export default function Home({ projects } : HomeProps) {
   const [activeFilters, setActiveFilters] = useState([]); // Filter projects with tags
   const [tagCount, setTagCount] = useState(0); // Track number of active tags
   
-  const tags: string[] = ['UX', 'design', 'Coding', '3D', 'Motion', 'Identity', 'Print'];
+  const tags: string[] = CATEGORIES;
+  // console.log(projects);
+  
 
   function toggleFilters(tag: string) {
     if (activeFilters.includes(tag)) {
