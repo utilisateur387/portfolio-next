@@ -17,7 +17,6 @@ const ProjectDetails = ({ project } : ProjectProps) => {
   }, []);
 
   const {
-    _id,
     title,
     year,
     team,
@@ -196,7 +195,16 @@ const ProjectDetails = ({ project } : ProjectProps) => {
 
             { youtube &&
               <div className="wrapper-video">
-              <iframe width="640" height="480" src={`https://www.youtube.com/embed/${youtube}?controls=0`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>              </div>
+                <iframe 
+                  width="640" 
+                  height="480" 
+                  src={`https://www.youtube.com/embed/${youtube}?controls=0`} 
+                  title="YouTube video player" 
+                  frameborder="0" 
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                  allowfullscreen>
+                </iframe>
+              </div>
             }
             {/* { local_video &&
               <div className="project-video-container">

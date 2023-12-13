@@ -35,7 +35,7 @@ const project = {
             list: [
               { title: "UX", value: "ux" },
               { title: "Design", value: "design" },
-              { title: "Coding", value: "coding" },
+              { title: "Dev", value: "dev" },
               { title: "3D", value: "3d" },
               { title: "Motion", value: "motion" },
               { title: "Identity", value: "identity" },

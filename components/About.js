@@ -126,10 +126,9 @@ const About = ({ toggleAbout, showAbout }) => {
                 NextJS<br/>
                 ReactJS<br/>
                 Sanity<br/>
-                PHP<br/>
+                PHP, Magento 2<br/>
                 Ruby on Rails<br/>
-                ES6 Javascript<br/>
-                HTML, CSS<br/>
+                HTML, CSS, JS<br/>
                 Git, GitHub<br/>
                 SQL, GraphQL<br/>
                 {/* Heroku, Clever Cloud<br/> */}

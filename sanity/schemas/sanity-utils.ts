@@ -37,6 +37,8 @@ export async function getProject(slug: string): Promise<Project> {
       music,
       githubUrl,
       liveUrl,
+      youtube,
+      vimeo,
     }`,
     { slug: slug }
   )

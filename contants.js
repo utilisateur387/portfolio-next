@@ -1,7 +1,7 @@
 export const CATEGORIES = [
   "UX",
   "Design",
-  "Coding",
+  "Dev",
   "3D",
   "Motion",
   "Identity",
