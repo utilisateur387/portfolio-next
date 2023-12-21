@@ -18,14 +18,12 @@ export default function Home({ projects } : HomeProps) {
   const [activeFilters, setActiveFilters] = useState([]); // Filter projects with tags
   const [tagCount, setTagCount] = useState(0); // Track number of active tags
   
-  const tags: string[] = CATEGORIES;
-  // console.log(projects);
-  
+  const tags: string[] = CATEGORIES;  
 
   function toggleFilters(tag: string) {
     if (activeFilters.includes(tag)) {
       setActiveFilters(prev => {
-        return prev.filter(current => current !== tag)
+        return prev.filter(current => current.toUpperCase() !== tag.toUpperCase())
       })
       setTagCount(activeFilters.length - 1)
 

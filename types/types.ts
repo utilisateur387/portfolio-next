@@ -15,6 +15,7 @@ export type Project = {
   coverImage: string,
   vimeo: string,
   youtube: string,
+  localVideo: string,
   gallery: Array<string>
   description: PortableTextBlock[],
 }

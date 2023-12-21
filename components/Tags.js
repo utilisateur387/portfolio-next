@@ -2,12 +2,15 @@ import useAnchor from './useAnchor';
 
 const Tags = ({ tags, tagsDisplay, toggleFilters }) => {
   const anchor = useAnchor();
+  
   const handleClick = () => {
     anchor.scrollIntoView({ behavior: 'smooth' });
   };
 
   const handleFilter = (e) => {
     const button = e.currentTarget;
+    console.log("button.value");
+    console.log(button.value);
     toggleFilters(button.value);
 
     const cross = button.querySelector('.cross');

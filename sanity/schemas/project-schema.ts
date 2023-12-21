@@ -33,18 +33,18 @@ const project = {
           type: 'string',
           options: {
             list: [
-              { title: "UX", value: "ux" },
-              { title: "Design", value: "design" },
-              { title: "Dev", value: "dev" },
-              { title: "3D", value: "3d" },
-              { title: "Motion", value: "motion" },
-              { title: "Identity", value: "identity" },
-              { title: "Print", value: "print" },
-              { title: "VR", value: "vr" },
-              { title: "VJ", value: "vj" },
-              { title: "Installation", value: "installation" },
-              { title: "Mapping", value: "mapping" },
-              { title: "Video", value: "video" },
+              { title: "UX", value: "UX" },
+              { title: "Design", value: "Design" },
+              { title: "Dev", value: "Dev" },
+              { title: "3D", value: "3D" },
+              { title: "Motion", value: "Motion" },
+              { title: "Identity", value: "Identity" },
+              { title: "Print", value: "Print" },
+              { title: "VR", value: "VR" },
+              { title: "VJ", value: "VJ" },
+              { title: "Installation", value: "Installation" },
+              { title: "Mapping", value: "Mapping" },
+              { title: "Video", value: "Video" },
             ],
           }
         }
@@ -108,6 +108,10 @@ const project = {
     }, {
       name: 'vimeo',
       title: 'Vimeo',
+      type: 'string',
+    }, {
+      name: 'localVideo',
+      title: 'Local video',
       type: 'string',
     }, {
       name: 'youtube',

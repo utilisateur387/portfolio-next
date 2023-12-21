@@ -25,6 +25,7 @@ const ProjectDetails = ({ project } : ProjectProps) => {
     liveUrl,
     youtube,
     vimeo,
+    localVideo,
     description,
     type,
     music,
@@ -206,14 +207,15 @@ const ProjectDetails = ({ project } : ProjectProps) => {
                 </iframe>
               </div>
             }
-            {/* { local_video &&
+
+            { localVideo &&
               <div className="project-video-container">
                 <video width="auto" height="auto" autoplay="autoplay">
-                  <source src={`${imgsFolder}/video01.mp4`} type="video/mp4"/>
+                  <source src={`images/${project.slug}/${project.localVideo}`} type="video/mp4"/>
                   Your browser does not support the video tag.
                 </video>
               </div>
-             } */}
+             }
 
           </div>
         </motion.div>

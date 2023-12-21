@@ -12,3 +12,18 @@ export const CATEGORIES = [
   "Mapping",
   "Video",
 ]
+
+// export const CATEGORIES = [
+//   "UX",
+//   "DESIGN",
+//   "DEV",
+//   "3D",
+//   "MOTION",
+//   "IDENTITY",
+//   "PRINT",
+//   "VR",
+//   "VJ",
+//   "INSTALLATION",
+//   "MAPPING",
+//   "VIDEO",
+// ]

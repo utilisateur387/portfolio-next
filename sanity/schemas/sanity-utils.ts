@@ -39,6 +39,7 @@ export async function getProject(slug: string): Promise<Project> {
       liveUrl,
       youtube,
       vimeo,
+      localVideo,
     }`,
     { slug: slug }
   )

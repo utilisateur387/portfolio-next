@@ -7,9 +7,7 @@ const NavButtons = ({ tags, toggleFilters, toggleAbout, tagCount }) => {
     <motion.div
       id="filters"
       className="nav-buttons"
-      // style={{ opacity: active ? 1 : 0}}
       >
-
       <FilterButton
         tags={tags}
         toggleFilters={toggleFilters}
