@@ -140,39 +140,6 @@ const ProjectDetails = ({ project } : ProjectProps) => {
               </div>
             </div>
 
-            {/* MOBILE LAYOUT */}
-            {/* <div className="description mobile">
-              <p className='content-title'>Project information</p>
-              <PortableText value={description} />
-            </div>
-
-            <div className="project-infos mobile">
-              <div className="categories">
-                <p className='content-title'>Categories</p>
-                <div className="container-categories-tags">
-                  {categories.map(tag => <span className="tag tag-details-page" key={tag}>{`${tag} `}</span>)}
-                </div>
-
-               { (livesite || github) &&
-                  <div className="project-links">
-                    <p className='content-title'>Links</p>
-
-                    { livesite &&
-                      <span className="link nobreak">
-                        <a href={livesite} target="_blank" rel="noreferrer">Livesite</a> <img src="images/general/arrow_slanted.png" className="arrow-slanted" alt="arrow" />
-                      </span>
-                    }
-
-                    { github &&
-                      <span className="link nobreak">
-                        <a href={github} target="_blank" rel="noreferrer">Github</a> <img src="images/general/arrow_slanted.png" className="arrow-slanted" alt="arrow" />
-                      </span>
-                    }
-                  </div>
-                }
-              </div>
-            </div> */}
-
             {/* MAIN CONTENT */}
             { vimeo &&
               <div className="wrapper-video">

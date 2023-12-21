@@ -6,7 +6,6 @@ import NavButtons from '@/components/NavButtons'
 import Projects from '@/components/Projects'
 import { CATEGORIES } from '@/contants'
 import { Project } from '@/types/types'
-import Image from 'next/image'
 import { useState } from 'react'
 
 type HomeProps = {
