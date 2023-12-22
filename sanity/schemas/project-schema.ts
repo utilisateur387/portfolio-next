@@ -125,7 +125,9 @@ const project = {
       name: 'orderRank',
       title: 'Order rank',
       type: 'string',
-      hidden: ({document}) => !document?.title
+      hidden: ({document} : any) => !document?.title
+      // hidden: ({ document }: { document: Document<Project> }) => !document?.title,
+
     }
   ]
 }
