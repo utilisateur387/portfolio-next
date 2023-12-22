@@ -126,8 +126,6 @@ const project = {
       title: 'Order rank',
       type: 'string',
       hidden: ({document} : any) => !document?.title
-      // hidden: ({ document }: { document: Document<Project> }) => !document?.title,
-
     }
   ]
 }
