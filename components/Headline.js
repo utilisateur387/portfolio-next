@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import useAnchor from './useAnchor.js';
 import { motion } from 'framer-motion';
 
@@ -23,28 +24,38 @@ const Headline = () => {
       <motion.div
         initial={{
           scale: 0.8,
-          opacity: 0
+          opacity: 0,
+          y: 80 // Initial position
         }}
         animate={{
           opacity: 1,
           scale: 0.8,
-          y: [80, 90, 80],
+          y: [80, 90, 80], // Animating from 80 to 90 and back to 80
         }}
         transition={{
           delay: 1,
           duration: 1,
           ease: "easeInOut",
+          repeat: Infinity,
           loop: Infinity,
-          repeatDelay: 3
+          repeatDelay: 2,
+          // yoyo: Infinity // Adding yoyo property for continuous back and forth motion
         }}
       >
         <div className="scroll-message">
           <a href="#projects" onClick={handleClick}>
-            <img src="images/general/arrow_down.png" alt="" />
+            <Image 
+              src="/images/general/arrow_down.png" 
+              alt="" 
+              width={100}
+              height={100}
+              sizes='(max-width: 768px) 10vw, 20vw'
+              style={{ width: 20 }}
+            />
           </a>
         </div>
-
       </motion.div>
+
     </motion.div>
   )
 }

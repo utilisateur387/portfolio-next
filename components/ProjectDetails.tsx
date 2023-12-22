@@ -49,7 +49,15 @@ const ProjectDetails = ({ project } : ProjectProps) => {
           className="btn"
           onClick={handleBack}
           style={{ zIndex: 100 }}>
-          <img src="images/general/arrow_left.png" alt="" className="arrow-back" />
+          <Image 
+            src="/images/general/arrow_left.png" 
+            alt="arrow icon" 
+            className="arrow-back" 
+            width={0}
+            height={0}
+            style={{ width: '100%', height: 'auto' }} 
+            sizes='10vw'
+          />
           Back to index
         </p>
 
@@ -68,7 +76,15 @@ const ProjectDetails = ({ project } : ProjectProps) => {
               </span>
             </p>
 
-            <img src={coverImage} alt="Project cover" className='project-cover-img' />
+            <Image 
+              src={coverImage} 
+              alt="Project cover" 
+              className='project-cover-img' 
+              width={0}
+              height={0}
+              style={{ width: '100%', height: 'auto' }} 
+              sizes='100vw'
+            />
 
             {/* MAIN CONTENT */}
             <div className="mb-8 mt-4">
@@ -90,13 +106,31 @@ const ProjectDetails = ({ project } : ProjectProps) => {
 
                       { liveUrl &&
                         <span className="link nobreak">
-                          <a href={liveUrl} target="_blank" rel="noreferrer">Online</a> <img src="images/general/arrow_slanted.png" className="arrow-slanted" alt="arrow" />
+                          <a href={liveUrl} target="_blank" rel="noreferrer">Online</a> 
+                          <Image 
+                            src="/images/general/arrow_slanted.png" 
+                            className="arrow-slanted" 
+                            alt="arrow icon" 
+                            width={0}
+                            height={0}
+                            style={{ width: '100%', height: 'auto' }} 
+                            sizes='10vw'
+                          />
                         </span>
                       }
 
                       { githubUrl &&
                         <span className="link nobreak">
-                          <a href={githubUrl} target="_blank" rel="noreferrer">Github</a> <img src="images/general/arrow_slanted.png" className="arrow-slanted" alt="arrow" />
+                          <a href={githubUrl} target="_blank" rel="noreferrer">Github</a> 
+                          <Image 
+                            src="/images/general/arrow_slanted.png" 
+                            className="arrow-slanted" 
+                            alt="arrow icon" 
+                            width={0}
+                            height={0}
+                            style={{ width: '100%', height: 'auto' }} 
+                            sizes='10vw'
+                          />
                         </span>
                       }
                     </div>
@@ -115,7 +149,7 @@ const ProjectDetails = ({ project } : ProjectProps) => {
                     { tools &&
                       <div>
                         Tools:<br/>
-                        {tools.map(person => <span>{person}<br/></span>)}
+                        {tools.map(tool => <span key={tool}>{tool}<br/></span>)}
                         <br/>
                       </div>
                     }
@@ -123,7 +157,7 @@ const ProjectDetails = ({ project } : ProjectProps) => {
                     { team &&
                       <div>
                         Team:<br/>
-                        {team.map(person => <span>{person}<br/></span>)}
+                        {team.map(person => <span key={person}>{person}<br/></span>)}
                         <br/>
                       </div>
                     }
@@ -150,6 +184,7 @@ const ProjectDetails = ({ project } : ProjectProps) => {
             { gallery && gallery.map(asset => {
               return (
                 <Image
+                  key={asset.url}
                   src={asset.url}
                   alt={asset.alt}
                   height={100}
@@ -177,7 +212,7 @@ const ProjectDetails = ({ project } : ProjectProps) => {
 
             { localVideo &&
               <div className="project-video-container">
-                <video width="auto" height="auto" autoplay="autoplay">
+                <video width="auto" height="auto" loop autoplay="autoplay">
                   <source src={`images/${project.slug}/${project.localVideo}`} type="video/mp4"/>
                   Your browser does not support the video tag.
                 </video>

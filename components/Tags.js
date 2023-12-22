@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import useAnchor from './useAnchor';
 
 const Tags = ({ tags, tagsDisplay, toggleFilters }) => {
@@ -34,7 +35,15 @@ const Tags = ({ tags, tagsDisplay, toggleFilters }) => {
           onClick={handleFilter}>
           {tag }
           <span className="cross" >
-            <img className="img-cross" src="images/general/cross_blue.png" alt="" />
+            <Image 
+              className="img-cross" 
+              src="/images/general/cross_blue.png" 
+              alt="cross icon"
+              width={0}
+              height={0}
+              style={{ width: '100%', height: 'auto' }} 
+              sizes='10vw'
+            />
           </span>
         </button>)}
     </div>

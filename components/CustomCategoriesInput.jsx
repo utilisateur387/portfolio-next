@@ -13,7 +13,6 @@ const CustomCategoriesInput = React.forwardRef((props, ref) => {
     { title: 'UX', value: 'ux' },
     { title: 'Coding', value: 'coding' },
     { title: 'Design', value: 'design' },
-    // Add more categories as needed
   ];
 
   const handleChange = (newValue) => {
@@ -23,7 +22,7 @@ const CustomCategoriesInput = React.forwardRef((props, ref) => {
   return (
     <div>
       {categories.map((category) => (
-        <>
+        <div key={category.value}>
           <label key={category.value}>
             <input
               type="checkbox"
@@ -39,10 +38,12 @@ const CustomCategoriesInput = React.forwardRef((props, ref) => {
             />
             {category.title}
           </label>
-        </>
+        </div>
       ))}
     </div>
   );
 })
+
+CustomCategoriesInput.displayName = 'CustomCategoriesInput';
 
 export default CustomCategoriesInput

@@ -1,6 +1,7 @@
 import Tags from './Tags';
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import Image from 'next/image';
 
 const FilterButton = ({ tags, toggleFilters, tagCount }) => {
   const [isExpanded, setIsExpanded] = useState(false);
@@ -28,11 +29,15 @@ const FilterButton = ({ tags, toggleFilters, tagCount }) => {
         >
         <span className="filter-title" onClick={handleClick}>Filters ({tagCount})</span>
         <div style={{ width: '90vw' }}>
-          <img
-            src="images/general/cross.png" alt=""
+          <Image
+            src="/images/general/cross.png" 
+            alt="cross icon"
             onClick={handleClick}
             className="img-cross-block"
             style={{ display: isExpanded ? 'block' : 'none' }}
+            width={0}
+            height={0}
+            sizes='10vw'
             />
           <Tags tagsDisplay={tagsDisplay} tags={tags} toggleFilters={toggleFilters} />
         </div>

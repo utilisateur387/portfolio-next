@@ -16,6 +16,11 @@ export type Project = {
   vimeo: string,
   youtube: string,
   localVideo: string,
-  gallery: Array<string>
+  gallery: Array<galleryAsset>
   description: PortableTextBlock[],
 }
+
+type galleryAsset = {
+  url: string,
+  alt: string,
+};

@@ -1,4 +1,5 @@
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 
 const About = ({ toggleAbout, showAbout }) => {
   return (
@@ -12,21 +13,32 @@ const About = ({ toggleAbout, showAbout }) => {
         exit={{ y: '100vh' }}>
         <div className="about-close">
 
-          <img
-            src="images/general/cross.png" alt=""
+          <Image
+            src="/images/general/cross.png"
             onClick={toggleAbout}
             className="img-cross-block cross-about"
+            alt="cross icon"
+            width={0}
+            height={0}
+            sizes='(max-width: 768px) 5vw, 10vw'
             />
         </div>
 
         <div class="about-back" onClick={toggleAbout}>
-          <img src="images/general/arrow_left.png" alt="" className="arrow-back-about" />
+          <Image 
+            src="/images/general/arrow_left.png" 
+            alt="arrow icon"
+            className="arrow-back-about" 
+            width={0}
+            height={0}
+            sizes='(max-width: 768px) 10vw, 10vw' 
+            />
           Back
         </div>
 
         <div className="intro my-7">
           <p>
-            I'm a web developer and digital designer deeply passionate about digital arts and crafting immersive experiences. Originally from France, I worked as a graphic designer in New York before returning home to complete Le Wagon's full-stack coding bootcamp in Nantes. After gaining experience as a fullstack developer in a company, I now freelance, blending my skills in design and development to craft captivating digital experiences.          </p>
+            I&apos;m a web developer and digital designer deeply passionate about digital arts and crafting immersive experiences. Originally from France, I worked as a graphic designer in New York before returning home to complete Le Wagon&apos;s full-stack coding bootcamp in Nantes. After gaining experience as a fullstack developer in a company, I now freelance, blending my skills in design and development to craft captivating digital experiences.</p>
           <p>
             Feel free to reach out for a chat, a project, or anything else.
           </p>
@@ -45,12 +57,28 @@ const About = ({ toggleAbout, showAbout }) => {
             <p className="about-section-title">Find me online</p>
             <span className="link nobreak">
               <a href="https://github.com/utilisateur387/" rel="noreferrer" target="_blank">
-                Github <img src="images/general/arrow_slanted.png" className="arrow-slanted" alt="arrow" />
+                Github 
+                <Image 
+                  src="/images/general/arrow_slanted.png" 
+                  className="arrow-slanted" 
+                  alt="arrow icon" 
+                  width={0}
+                  height={0}
+                  sizes='10vw'
+                />
               </a>
             </span>
             <span className="link nobreak">
               <a href="https://www.linkedin.com/in/utilisateur387/" rel="noreferrer" target="_blank">
-                LinkedIn <img src="images/general/arrow_slanted.png" className="arrow-slanted" alt="arrow" />
+                LinkedIn 
+                <Image 
+                  src="/images/general/arrow_slanted.png" 
+                  className="arrow-slanted" 
+                  alt="arrow icon" 
+                  width={0}
+                  height={0}
+                  sizes='10vw'
+                />
               </a>
             </span>
           </div>
@@ -98,7 +126,15 @@ const About = ({ toggleAbout, showAbout }) => {
               <span className="additional-infos">ENSAAMA Olivier de Serres, Paris</span><br/>
               <span className="additional-infos link nobreak">
                 <a rel="noreferrer" href="http://ensaama.net/site/home/diplomes/2018/dsaa-design-graphique/Iyeyemi-Miebi" target="_blank">
-                  Graduation project <img src="images/general/arrow_slanted.png" className="arrow-slanted" alt="arrow" />
+                  Graduation project 
+                  <Image 
+                    src="/images/general/arrow_slanted.png" 
+                    className="arrow-slanted" 
+                    alt="arrow" 
+                    width={0}
+                    height={0}
+                    sizes='10vw'
+                  />
                 </a>
               </span>
             </p>

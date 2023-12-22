@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 
@@ -28,7 +29,14 @@ const Card = ({ project }) => {
         <div
           className="img-container"
           style={{ opacity: inView ? 1 : 0, transition: 'opacity 1s', transitionDelay: '50ms'}}>
-          <img src={coverUrl} alt={coverAlt} />
+          <Image 
+            src={coverUrl} 
+            alt={coverAlt} 
+            width={0}
+            height={0}
+            style={{ width: '100%', height: 'auto' }} 
+            sizes='(max-width: 768px) 100vw, 50vw'
+          />
         </div>
       </Link> }
 
@@ -36,7 +44,14 @@ const Card = ({ project }) => {
         <div
           className="img-container"
           style={{ opacity: inView ? 1 : 0, transition: 'opacity 1s', transitionDelay: '50ms'}}>
-          <img src={coverUrl} alt={coverAlt} />
+          <Image 
+            src={coverUrl} 
+            alt={coverAlt} 
+            width={0}
+            height={0}
+            style={{ width: '100%', height: 'auto' }} 
+            sizes='(max-width: 768px) 100vw, 50vw'
+          />
         </div>
        }
     </div>
