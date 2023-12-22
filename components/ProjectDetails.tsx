@@ -55,7 +55,6 @@ const ProjectDetails = ({ project } : ProjectProps) => {
             className="arrow-back" 
             width={0}
             height={0}
-            style={{ width: '100%', height: 'auto' }} 
             sizes='10vw'
           />
           Back to index
@@ -82,7 +81,7 @@ const ProjectDetails = ({ project } : ProjectProps) => {
               className='project-cover-img' 
               width={0}
               height={0}
-              style={{ width: '100%', height: 'auto' }} 
+              style={{ width: '100%', height: 'calc((100vw - 48px) / 2.7);' }} 
               sizes='100vw'
             />
 
@@ -113,7 +112,6 @@ const ProjectDetails = ({ project } : ProjectProps) => {
                             alt="arrow icon" 
                             width={0}
                             height={0}
-                            style={{ width: '100%', height: 'auto' }} 
                             sizes='10vw'
                           />
                         </span>
@@ -128,7 +126,6 @@ const ProjectDetails = ({ project } : ProjectProps) => {
                             alt="arrow icon" 
                             width={0}
                             height={0}
-                            style={{ width: '100%', height: 'auto' }} 
                             sizes='10vw'
                           />
                         </span>
@@ -177,7 +174,17 @@ const ProjectDetails = ({ project } : ProjectProps) => {
             {/* MAIN CONTENT */}
             { vimeo &&
               <div className="wrapper-video">
-                <iframe src={`https://player.vimeo.com/video/${vimeo}?title=0&byline=0&portrait=0&transparent=0&autoplay=1`} width="640" height="480" frameborder="0" title={title} webkitallowfullscreen="" mozallowfullscreen="" allowfullscreen="" data-ready="true"></iframe>
+                <iframe 
+                  src={`https://player.vimeo.com/video/${vimeo}?title=0&byline=0&portrait=0&transparent=0&autoplay=1`} 
+                  width="640" 
+                  height="480" 
+                  title={title} 
+                  data-ready="true"
+                  // frameborder="0" 
+                  // webkitallowfullscreen="" 
+                  // mozallowfullscreen="" 
+                  // allowfullscreen="" 
+                  ></iframe>
               </div>
             }
 
@@ -203,16 +210,25 @@ const ProjectDetails = ({ project } : ProjectProps) => {
                   height="480" 
                   src={`https://www.youtube.com/embed/${youtube}?controls=0`} 
                   title="YouTube video player" 
-                  frameborder="0" 
                   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                  allowfullscreen>
+                  // frameborder="0" 
+                  // allowfullscreen
+                  >
                 </iframe>
               </div>
             }
 
             { localVideo &&
               <div className="project-video-container">
-                <video width="auto" height="auto" loop autoplay="autoplay">
+                <video 
+                  width="auto" 
+                  height="auto" 
+                  loop 
+                  autoPlay
+                  muted
+                  className='mx-auto'
+                  style={{ maxWidth: 1100 }}
+                >
                   <source src={`images/${project.slug}/${project.localVideo}`} type="video/mp4"/>
                   Your browser does not support the video tag.
                 </video>
