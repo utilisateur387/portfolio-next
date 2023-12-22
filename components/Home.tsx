@@ -14,7 +14,7 @@ type HomeProps = {
 
 export default function Home({ projects } : HomeProps) {
   const [showAbout, setShowAbout] = useState(false);
-  const [activeFilters, setActiveFilters] = useState([]); // Filter projects with tags
+  const [activeFilters, setActiveFilters] = useState(Array<string>); // Filter projects with tags
   const [tagCount, setTagCount] = useState(0); // Track number of active tags
   
   const tags: string[] = CATEGORIES;  

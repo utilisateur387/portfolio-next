@@ -10,13 +10,9 @@ const Tags = ({ tags, tagsDisplay, toggleFilters }) => {
 
   const handleFilter = (e) => {
     const button = e.currentTarget;
-    console.log("button.value");
-    console.log(button.value);
     toggleFilters(button.value);
-
     const cross = button.querySelector('.cross');
     cross.classList.toggle('cross-active');
-
     button.classList.toggle('tag-active');
   }
 
@@ -41,7 +37,6 @@ const Tags = ({ tags, tagsDisplay, toggleFilters }) => {
               alt="cross icon"
               width={0}
               height={0}
-              style={{ width: '100%', height: 'auto' }} 
               sizes='10vw'
             />
           </span>
