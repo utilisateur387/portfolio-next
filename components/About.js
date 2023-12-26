@@ -55,7 +55,7 @@ const About = ({ toggleAbout, showAbout }) => {
 
           <div>
             <p className="about-section-title">Find me online</p>
-            <span className="link nobreak">
+            <span className="link nobreak mr-5">
               <a href="https://github.com/utilisateur387/" rel="noreferrer" target="_blank">
                 Github 
                 <Image 

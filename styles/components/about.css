@@ -52,8 +52,8 @@
 }
 .arrow-slanted {
   width: 14px;
-  margin-right: 24px;
   display: inline-block;
+  margin-left: 4px;
 }
 .technologies {
   display: grid;
