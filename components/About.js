@@ -38,7 +38,7 @@ const About = ({ toggleAbout, showAbout }) => {
 
         <div className="intro my-7">
           <p>
-            I&apos;m a web developer and digital designer with a strong passion for digital arts and crafting immersive experiences. Originally from France, I began my career as a graphic designer in New York, where I honed my skills in visual communication and creative problem-solving. After returning home, I completed Le Wagon's full-stack coding bootcamp in Nantes, gaining a solid foundation in web development.
+            I&apos;m a web developer and digital designer with a strong passion for digital arts and crafting immersive experiences. Originally from France, I began my career as a graphic designer in New York, where I honed my skills in visual communication and creative problem-solving. After returning home, I completed Le Wagon&apos;s full-stack coding bootcamp in Nantes, gaining a solid foundation in web development.
           </p>
           <p>
             My experience as a full-stack developer has allowed me to seamlessly blend my design and technical skills to create captivating digital experiences. Now freelancing, I&apos;ve led various projects from conception to delivery, focusing on cohesive and efficient collaboration across teams. I&apos;m enthusiastic about leveraging my technical expertise and creative insights to oversee and optimize project workflows, drive innovation, and deliver high-quality digital solutions.
