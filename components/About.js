@@ -38,7 +38,11 @@ const About = ({ toggleAbout, showAbout }) => {
 
         <div className="intro my-7">
           <p>
-            I&apos;m a web developer and digital designer deeply passionate about digital arts and crafting immersive experiences. Originally from France, I worked as a graphic designer in New York before returning home to complete Le Wagon&apos;s full-stack coding bootcamp in Nantes. After gaining experience as a fullstack developer in a company, I now freelance, blending my skills in design and development to craft captivating digital experiences.</p>
+            I&apos;m a web developer and digital designer with a strong passion for digital arts and crafting immersive experiences. Originally from France, I began my career as a graphic designer in New York, where I honed my skills in visual communication and creative problem-solving. After returning home, I completed Le Wagon's full-stack coding bootcamp in Nantes, gaining a solid foundation in web development.
+          </p>
+          <p>
+            My experience as a full-stack developer has allowed me to seamlessly blend my design and technical skills to create captivating digital experiences. Now freelancing, I&apos;ve led various projects from conception to delivery, focusing on cohesive and efficient collaboration across teams. I&apos;m enthusiastic about leveraging my technical expertise and creative insights to oversee and optimize project workflows, drive innovation, and deliver high-quality digital solutions.
+          </p>
           <p>
             Feel free to reach out for a chat, a project, or anything else.
           </p>
@@ -90,6 +94,14 @@ const About = ({ toggleAbout, showAbout }) => {
           <div className="about-content-block">
             <p className="about-section-title">
               Experience
+            </p>
+            <p>
+              <span className="uppercase">Freelance</span><br/>
+              <span className="additional-infos">UX/UI Designer and Web Developer</span>
+            </p>
+            <p>
+              <span className="uppercase">Le Wagon, Nantes</span><br/>
+              <span className="additional-infos">Teacher and Teaching-Assistant</span>
             </p>
             <p>
               <span className="uppercase">C-monetiquette, Bordeaux</span><br/>
@@ -149,7 +161,7 @@ const About = ({ toggleAbout, showAbout }) => {
               Clients / Collaborators
             </p>
             <p>
-              Apple, Facebook, The New York Times, Equinox, RFK Human Rights, Dreamscape, IFAW, Matouk, MCR Labs, Mykita, Perlon, Funkhaus Berlin, Pfalzbau Theater, Münchner Kammerspiele
+              Apple, Facebook, The New York Times, Equinox, RFK Human Rights, Dreamscape, IFAW, Matouk, MCR Labs, Mykita, Perlon, Funkhaus Berlin, Pfalzbau Theater, Münchner Kammerspiele, Boutin Services...
             </p>
           </div>
 
@@ -171,6 +183,7 @@ const About = ({ toggleAbout, showAbout }) => {
               </div>
 
               <div>
+                Notion<br/>
                 Figma<br/>
                 Adobe Creative Suite<br/>
                 Blender 3D<br/>
