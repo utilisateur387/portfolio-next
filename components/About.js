@@ -73,7 +73,7 @@ const About = ({ toggleAbout, showAbout }) => {
               </a>
             </span>
             <span className="link nobreak">
-              <a href="https://www.linkedin.com/in/utilisateur387/" rel="noreferrer" target="_blank">
+              <a href="https://www.linkedin.com/in/miebi-i/" rel="noreferrer" target="_blank">
                 LinkedIn 
                 <Image 
                   src="/images/general/arrow_slanted.png" 
