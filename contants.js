@@ -1,16 +1,18 @@
 export const CATEGORIES = [
-  "UX",
+  // "UX",
   "Design",
-  "Dev",
-  "3D",
-  "Motion",
-  "Identity",
-  "Print",
-  "VR",
-  "VJ",
+  "Coding",
+  // "Dev",
+  // "3D",
+  // "Motion",
+  // "Identity",
+  // "Print",
+  // "VR",
+  // "VJ",
   "Installation",
-  "Mapping",
+  // "Mapping",
   "Video",
+  "Performance",
 ]
 
 // export const CATEGORIES = [

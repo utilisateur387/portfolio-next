@@ -15,7 +15,7 @@
   font-size: 13px;
   text-transform: uppercase;
   border: solid 1px white;
-  padding: 6px 8px 4px 8px;
+  padding: 7px 9px 5px;
   margin-left: 6px;
   border-radius: 16px;
 }
@@ -34,6 +34,9 @@
 .img-container > img {
   margin-bottom: -4px; /* TEMPORARY, NEEDS TO BE FIXED */
   max-height: 100%;
+}
+.tags-container {
+  transform: translateY(-4px);
 }
 
 @media screen and (max-width: 440px) {

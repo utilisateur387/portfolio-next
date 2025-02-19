@@ -33,18 +33,19 @@ const project = {
           type: 'string',
           options: {
             list: [
-              { title: "UX", value: "UX" },
+              // { title: "UX", value: "UX" },
               { title: "Design", value: "Design" },
-              { title: "Dev", value: "Dev" },
-              { title: "3D", value: "3D" },
-              { title: "Motion", value: "Motion" },
-              { title: "Identity", value: "Identity" },
-              { title: "Print", value: "Print" },
-              { title: "VR", value: "VR" },
-              { title: "VJ", value: "VJ" },
+              { title: "Coding", value: "Coding" },
+              // { title: "3D", value: "3D" },
+              // { title: "Motion", value: "Motion" },
+              // { title: "Identity", value: "Identity" },
+              // { title: "Print", value: "Print" },
+              // { title: "VR", value: "VR" },
+              // { title: "VJ", value: "VJ" },
+              // { title: "Mapping", value: "Mapping" },
               { title: "Installation", value: "Installation" },
-              { title: "Mapping", value: "Mapping" },
               { title: "Video", value: "Video" },
+              { title: "Performance", value: "Performance" },
             ],
           }
         }

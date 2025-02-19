@@ -20,14 +20,14 @@ const FilterButton = ({ tags, toggleFilters, tagCount }) => {
       <motion.div
         className="filter-button"
         style={{ overflow: 'hidden' }}
-        initial={{ width: 105 }}
+        initial={{ width: 162 }}
         animate={{
-          width: isExpanded ? '100vw' : 105,
+          width: isExpanded ? '100vw' : 162,
           height: isExpanded ? 'auto' : 35,
         }}
         transition={{ duration: 0.3, stiffness: 30 }}
         >
-        <span className="filter-title" onClick={handleClick}>Filters ({tagCount})</span>
+        <span className="filter-title" onClick={handleClick}>Filter projects ({tagCount})</span>
         <div style={{ width: '90vw' }}>
           <Image
             src="/images/general/cross.png" 
