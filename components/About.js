@@ -97,7 +97,7 @@ const About = ({ toggleAbout, showAbout }) => {
             </p>
             <p>
               <span className="uppercase">Freelance</span><br/>
-              <span className="additional-infos">UX/UI Designer and Web Developer</span>
+              <span className="additional-infos">Digital Designer and Fullstack Developer</span>
             </p>
             <p>
               <span className="uppercase">Le Wagon, Nantes</span><br/>
