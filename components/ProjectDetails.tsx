@@ -31,6 +31,7 @@ const ProjectDetails = ({ project } : ProjectProps) => {
     music,
     categories,
     coverImage,
+    thumbnail,
     gallery
   } = project
 

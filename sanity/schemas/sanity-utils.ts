@@ -11,6 +11,7 @@ export async function getProjects(): Promise<Project[]> {
       categories[],
       "slug": slug.current,
       "coverImage": coverImage.asset->url,
+      "thumbnail": thumbnail.asset->url,
       orderRank,
     } | order(orderRank)`
   )
@@ -36,6 +37,7 @@ export async function getProject(slug: string): Promise<Project> {
       categories[],
       "slug": slug.current,
       "coverImage": coverImage.asset->url,
+      "thumbnail": thumbnail.asset->url,
       "gallery": gallery[]{
         "url": asset->url,
         alt

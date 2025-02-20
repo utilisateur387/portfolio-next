@@ -65,6 +65,20 @@ const project = {
         }
       ]
     }, {
+      name: 'thumbnail',
+      title: 'Thumbnail Image',
+      type: 'image',
+      options: {
+        hotspot: true
+      },
+      fields: [
+        {
+          name: 'alt',
+          title: 'Alt',
+          type: 'string',
+        }
+      ]
+    }, {
       name: 'gallery',
       title: 'Gallery',
       type: 'array',

@@ -13,6 +13,7 @@ export type Project = {
   liveUrl: string,
   categories: Array<string>,
   coverImage: string,
+  thumbnail: string,
   vimeo: string,
   youtube: string,
   localVideo: string,
