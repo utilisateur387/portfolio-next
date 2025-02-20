@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { useInView } from 'react-intersection-observer';
 
 const Card = ({ project }) => {
-  const coverUrl = project.coverImage;
-  const coverAlt = project.title;
+  const thumbnailUrl = project?.thumbnail || project.coverImage;
+  const thumbnailAlt = project.title;
 
   const [ref, inView] = useInView({
     threshold: 0,
@@ -30,8 +30,8 @@ const Card = ({ project }) => {
           className="img-container"
           style={{ opacity: inView ? 1 : 0, transition: 'opacity 1s', transitionDelay: '50ms'}}>
           <Image 
-            src={coverUrl} 
-            alt={coverAlt} 
+            src={thumbnailUrl} 
+            alt={thumbnailAlt} 
             width={0}
             height={0}
             style={{ width: '100%', height: 'auto' }} 
@@ -45,8 +45,8 @@ const Card = ({ project }) => {
           className="img-container"
           style={{ opacity: inView ? 1 : 0, transition: 'opacity 1s', transitionDelay: '50ms'}}>
           <Image 
-            src={coverUrl} 
-            alt={coverAlt} 
+            src={thumbnailUrl} 
+            alt={thumbnailAlt} 
             width={0}
             height={0}
             style={{ width: '100%', height: 'auto' }} 

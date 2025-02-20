@@ -31,7 +31,6 @@ const ProjectDetails = ({ project } : ProjectProps) => {
     music,
     categories,
     coverImage,
-    thumbnail,
     gallery
   } = project
 
@@ -41,8 +40,6 @@ const ProjectDetails = ({ project } : ProjectProps) => {
   const handleBack = () => {
     router.push('/#projects')
   }
-
-  const images = null
 
   return (
       <>
@@ -72,8 +69,8 @@ const ProjectDetails = ({ project } : ProjectProps) => {
                 {title}
               </span>
               <span className="italic">
-                , {type}, {year}
-              </span>
+                , {type}
+              </span>, {year}
             </p>
 
             <Image 
