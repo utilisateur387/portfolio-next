@@ -16,6 +16,14 @@ export async function getProjects(): Promise<Project[]> {
   )
 }
 
+export async function getProjectSlugs(): Promise<Project[]> {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "project"]{
+      "slug": slug.current,
+    }`
+  )
+}
+
 export async function getProject(slug: string): Promise<Project> {
   return createClient(clientConfig).fetch(
     groq`*[_type == "project" && slug.current == $slug][0]{
